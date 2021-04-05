@@ -1,0 +1,40 @@
+
+<html><head> 
+        <title>My Family Book</title> 
+        <link rel="stylesheet" href="style.css">
+    </head> 
+
+    <body data-new-gr-c-s-check-loaded="14.1002.0" data-gr-ext-installed="">
+        <center> 
+            <div>
+                <h1>My Family Book</h1>
+                <img id="photo" src="Father.jpg">
+                <br> 
+                <br>
+                <label id="Name_Display">Biju Moothala</label> 
+                 <br>
+                <br>
+                <button id="next_button" onclick="next_member()">Next</button> 
+            </div> 
+        </center>
+      
+
+    <script>
+        var names=["Biju Moothala","Deepti Biju","Dhanush Biju"];
+        
+        var images=["Father.jpg","mother.png","Child.jpg"];
+         
+        var i=0;
+        function next_member(){
+                document.getElementById("photo").src=images[i];
+                document.getElementById("Name_Display").innerHTML=names[i];
+                i++;
+
+                if(i == 3)
+                {
+                    i=0;
+                }
+        }
+
+    </script>
+</body> </html>
